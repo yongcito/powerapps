@@ -1,0 +1,17 @@
+component:
+  name: ChecklistContainer
+  description: Power Apps 점검 항목 갤러리용 확장형 컴포넌트
+layout:
+  width: TemplateWidth - Padding
+  height: 가변 높이 (선택 여부 및 TextCanvas1 Height 기반)
+logic:
+  selection: 'UpdateContext({_var_selected_item_gallery: ThisItem})'
+  gallery_items: _col_gallery8
+  add_button: Collect or ClearCollect with _id_ auto increment
+  patch_result: Switch + Patch to field_10 ~ field_17
+children:
+- TextCanvas1 (텍스트)
+- Container27 (배경 상태 아이콘)
+- Rectangle3 (선택 영역)
+- Gallery8 (입력 항목 반복)
+- ButtonCanvas5 / 5_1 (추가/확정)
